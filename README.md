@@ -77,6 +77,8 @@ This project uses Cocoapods to manage dependencies.
 2. Navigate to the project folder
 3. Install dependencies
 4. Open the project
+5. Register for a developer account at TMDB.org
+6. Make a copy of `TMDB-Info-sample.plist`, naming it `TMDB-Info.plist`, and insert your [TMDB API key](https://www.themoviedb.org/settings/api)
 
 ``` bash
 git clone https://github.com/peterfriese/JewelCase.git
