@@ -54,6 +54,7 @@
 		88D580ED24D0790900F51D70 /* DiscoverMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoviesView.swift; sourceTree = "<group>"; };
 		88D580EF24D07CBC00F51D70 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		88D580F224D07FCB00F51D70 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		88E2D27624E5582900A8C305 /* TMDB-Info-sample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info-sample.plist"; sourceTree = "<group>"; };
 		A6980C23CE96C44D27AAE102 /* Pods-JewelCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JewelCase.debug.xcconfig"; path = "Target Support Files/Pods-JewelCase/Pods-JewelCase.debug.xcconfig"; sourceTree = "<group>"; };
 		E66D3695C79602B250FE8F6A /* Pods_JewelCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JewelCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +158,7 @@
 				8852377924D0366F00E59940 /* Info.plist */,
 				88AB7E4824D1C2C9008B805E /* GoogleService-Info.plist */,
 				88764D1524D870C10056BDD0 /* TMDB-Info.plist */,
+				88E2D27624E5582900A8C305 /* TMDB-Info-sample.plist */,
 				8852377624D0366F00E59940 /* Preview Content */,
 			);
 			path = JewelCase;
@@ -212,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8852377C24D0366F00E59940 /* Build configuration list for PBXNativeTarget "JewelCase" */;
 			buildPhases = (
+				88E2D27724E5585900A8C305 /* Copy API key template */,
 				4B68B8EC33A94C37F6D93B6D /* [CP] Check Pods Manifest.lock */,
 				8852376924D0366F00E59940 /* Sources */,
 				8852376A24D0366F00E59940 /* Frameworks */,
@@ -313,6 +316,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		88E2D27724E5585900A8C305 /* Copy API key template */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy API key template";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "CONFIG_FILE_BASE_NAME=\"TMDB-Info\"\n\nCONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}.plist\nSAMPLE_CONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}-Sample.plist\n\nCONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/$CONFIG_FILE_NAME\nSAMPLE_CONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/$SAMPLE_CONFIG_FILE_NAME\n\nif [ -f \"$CONFIG_FILE_PATH\" ]; then\n  echo \"$CONFIG_FILE_PATH exists.\"\nelse\n  echo \"$CONFIG_FILE_PATH does not exist, copying sample\"\n  cp -v \"${SAMPLE_CONFIG_FILE_PATH}\" \"${CONFIG_FILE_PATH}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
