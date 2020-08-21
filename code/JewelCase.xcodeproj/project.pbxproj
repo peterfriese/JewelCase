@@ -214,8 +214,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8852377C24D0366F00E59940 /* Build configuration list for PBXNativeTarget "JewelCase" */;
 			buildPhases = (
-				88E2D27724E5585900A8C305 /* Copy API key template */,
 				4B68B8EC33A94C37F6D93B6D /* [CP] Check Pods Manifest.lock */,
+				88E2D27724E5585900A8C305 /* Copy API key template */,
 				8852376924D0366F00E59940 /* Sources */,
 				8852376A24D0366F00E59940 /* Frameworks */,
 				8852376B24D0366F00E59940 /* Resources */,

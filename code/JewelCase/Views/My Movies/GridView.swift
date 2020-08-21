@@ -38,7 +38,7 @@ struct GridView: View {
           }
         }
         .navigationBarTitle("Movies")
-        .toolbar(items: {
+        .toolbar(content: {
           ToolbarItem {
             Button(action: { presentDiscoverScreen.toggle() }, label: {
               Image(systemName: "magnifyingglass")

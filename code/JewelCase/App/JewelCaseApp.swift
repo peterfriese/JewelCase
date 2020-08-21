@@ -10,7 +10,6 @@ import Firebase
 
 @main
 struct JewelCaseApp: App {
-//  @StateObject var movieStore = MovieStore(movies: testData)
   @StateObject var movieStore = MovieStore()
   
   init() {

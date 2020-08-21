@@ -130,7 +130,7 @@ Project Link: [https://github.com/peterfriese/JewelCase](https://github.com/pete
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[xcode-shield]: https://img.shields.io/badge/xcode-v12.0b3-blue
+[xcode-shield]: https://img.shields.io/badge/xcode-v12.0b5-blue
 [xcode-url]: https://developer.apple.com/xcode/
 
 [swift-shield]: https://img.shields.io/badge/swift-v5.3-%23fe4b2d
